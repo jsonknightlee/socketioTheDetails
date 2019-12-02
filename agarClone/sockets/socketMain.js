@@ -66,7 +66,7 @@ io.sockets.on('connect',(socket)=>{
         xV = player.playerConfig.xVector = data.xVector;
         yV = player.playerConfig.yVector = data.yVector;
     
-        if((player.playerData.locX < 5 && player.playerData.xVector < 0) || (player.playerData.locX > settings.worldWidth) && (xV > 0)){
+        if((player.playerData.locX < 5 && player.playerConfig.xVector < 0) || (player.playerData.locX > settings.worldWidth) && (xV > 0)){
             player.playerData.locY -= speed * yV;
         }else if((player.playerData.locY < 5 && yV > 0) || (player.playerData.locY > settings.worldHeight) && (yV < 0)){
             player.playerData.locX += speed * xV;
